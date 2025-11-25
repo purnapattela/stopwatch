@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;900&family=Roboto+Mono:wght@400;700&family=Fira+Code:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div id="infoCard" class="info-card">
+        <div class="info-content">
+            <span class="key">Enter ↵</span> <span class="action">Start / Stop</span>
+            <span class="divider">|</span>
+            <span class="key">Space ␣</span> <span class="action">Pause / Resume</span>
+        </div>
+        <button id="closeInfoBtn" class="close-btn">
+            <span class="material-icons-round">close</span>
+        </button>
+    </div>
+
+    <button id="fullscreenBtn" class="fullscreen-btn" aria-label="Toggle Full Screen">
+        <span class="material-icons-round">fullscreen</span>
+    </button>
+
+    <div id="onboardingOverlay" class="onboarding-overlay">
+        <div class="onboarding-content">
+            <div class="arrow-container start-arrow">
+                <span class="arrow-text">Start / Resume</span>
+                <svg width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 0V80M30 80L10 60M30 80L50 60" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="arrow-container pause-arrow">
+                <span class="arrow-text">Pause</span>
+                <svg width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 0C50 40 10 40 10 80M10 80L30 60M10 80L-10 60" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="arrow-container stop-arrow">
+                <span class="arrow-text">Stop / Reset</span>
+                <svg width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C10 40 50 40 50 80M50 80L30 60M50 80L70 60" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="arrow-container fullscreen-arrow">
+                <span class="arrow-text">Full Screen</span>
+                <svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 60C40 60 40 20 80 20M80 20L60 40M80 20L60 0" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="click-to-dismiss">Click anywhere to dismiss</div>
+        </div>
+    </div>
+
+    <div class="glass-container">
+        <div class="timer-display">
+            <div class="time-unit" id="minutes">00</div>
+            <div class="separator">:</div>
+            <div class="time-unit" id="seconds">00</div>
+            <div class="separator small">.</div>
+            <div class="time-unit small" id="milliseconds">00</div>
+        </div>
+    </div>
+
+    <div class="controls-overlay">
+        <button id="pauseBtn" class="fab left" disabled aria-label="Pause">
+            <span class="material-icons-round">pause</span>
+        </button>
+
+        <button id="startBtn" class="fab center" aria-label="Start">
+            <span class="material-icons-round">play_arrow</span>
+        </button>
+
+        <button id="stopBtn" class="fab right" disabled aria-label="Stop">
+            <span class="material-icons-round">stop</span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

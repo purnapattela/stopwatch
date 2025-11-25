@@ -1,5 +1,10 @@
 # Elegant Dark Stopwatch
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d1595cde-eb54-485d-bf31-bdef37fdd25c/deploy-status)](https://app.netlify.com/projects/ezwatch/deploys)
+
+[**Live Demo**](https://ezwatch.netlify.app/)
+
+
 A premium, dark-themed stopwatch application featuring a modern glassmorphism UI, smooth animations, and a focus on user experience.
 
 ## Features
